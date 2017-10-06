@@ -20,33 +20,30 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
 
-export ANDROID_HOME=/Users/francois/dev/AndroidSdk
-export HOME=/Users/francois
- 
-#export PATH=/usr/local/git/bin:$PATH -> should not be necessary, git places a symlink in usr/local and in el capitan local has the priority over usr/bin
+#export HOME=/Users/francoisblavoet
+export ANDROID_HOME=$HOME/dev/AndroidSdk
+export GITHUB_USERNAME=FrancoisBlavoet
+
 
 #Android
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools/systrace
+export PATH=$PATH:$HOME/.rbenv/bin
 
 #scripts
-export PATH=$PATH:$HOME/config
+export PATH=$PATH:$HOME/scripts
 
 #local dir
 export PATH=$PATH:.
 
-alias exa="exa-osx-x86-64"
+alias exa="exa-macos-x86_64"
 alias ll="exa -lh"
 alias llg= "ll --git"
-#alias ls="gls --color=auto"
 alias lla="exa -lha"
 alias llag="lla --git"
 
-
-#eval `gdircolors /Users/francois/Config-Perso/dircolors.ansi-dark.txt`
 
 func showHiddenFiles() {
 
@@ -60,7 +57,3 @@ func showHiddenFiles() {
             killall Finder /System/Library/CoreServices/Finder.
 		fi
 }
-
-
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
